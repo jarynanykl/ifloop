@@ -15,7 +15,7 @@ public class Support {
     public static int INVALID_INPUT = -1;
 
     public void setINVALID_INPUT(int INVALID_INPUT) {
-            this.INVALID_INPUT = INVALID_INPUT;
+        this.INVALID_INPUT = INVALID_INPUT;
     }
     public static int safeReadInt() {
         int result = INVALID_INPUT;

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
 
-//    //region Demo
+    //region Demo
 //    /**
 //     * Example of use of {@link Support#safeReadInt()}
 //     *
@@ -48,7 +48,7 @@ public class Main {
      * Store all input numbers in a list (negative number terminates reading).
      * @return List of read values (terminating negative value is NOT included)
      */
-    public static List<Integer> storeAllInputInArrayListUntilNegative() {
+    private static List storeAllInputInArrayListUntilNegative() {
         int input = 0;
         List<Integer> result = new ArrayList<>();
         while (input >= 0) {
@@ -92,29 +92,14 @@ public class Main {
      * Print integers from given list. Replace 1 by "one", 2 by "two", 3 by "three" - print others with no change.
      * @param list List of integers to print.
      */
-//*    public static void printIntegersWithReplace(List<Integer> list) {
-//        for (Integer i : list) {
-//            switch(i) {
-//                case 1: System.out.println("one"); break;
-//                case 2: System.out.println("two"); break;
-//                case 3: System.out.println("three"); break;
-//                default: System.out.println(i); break;
-//            }
-//        }
-//    }
-
     public static void printIntegersWithReplace(List<Integer> list) {
-        for (Integer i : list) {
-            if (i == 1) {
-                System.out.println("one");
-            } else if (i == 2) {
-                System.out.println("two");
-            } else if (i == 3) {
-                System.out.println("three");
-            } else {
-                System.out.println(i);
+        for (Integer i : list)
+            switch (i) {
+                case 1 -> System.out.println("one");
+                case 2 -> System.out.println("two");
+                case 3 -> System.out.println("three");
+                default -> System.out.println(i);
             }
-        }
     }
 
     public static void main(String[] args) {
@@ -129,7 +114,8 @@ public class Main {
         System.out.println("Total sum: " + sumAllInputUntilNegative());
         // ---
         System.out.println("--- Task 3 - read integers to list until negative ---");
-        List<Integer> list = storeAllInputInArrayListUntilNegative();
+        List<Integer> list;
+        list = storeAllInputInArrayListUntilNegative();
         System.out.println(list);
         // ---
         System.out.println("--- Task 4 - print all integers from list ---");
